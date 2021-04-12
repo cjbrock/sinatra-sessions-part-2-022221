@@ -1,0 +1,26 @@
+<h1><%= @thought.subject %></h1>
+
+<br><br>
+<a href="/thoughts" > ⬅️ TO OUR THOUGHTS! 💭🏃‍♀️ </a>
+<br><br>
+
+    <h3><%= @thought.subject %></h3>
+    <h3><%= @thought.details %></h3>
+    <h3><%= @thought.sentiment %></h3>
+    <h3><%= @thought.intrusive %></h3>
+    <h3><%= @thought.logical %></h3>
+
+    <br><br>
+
+    <a href="/thoughts/<%= @thought.id %>/edit" > EDIT </a>
+    
+    <br><br>
+
+    <h3>WANNA DELETE THIS THOUGHT??</h3>
+        <form method="POST" action="/thoughts/<%= @thought.id %>">
+            <input type="hidden" id="hidden" name="_method" value="DELETE">
+            <input type="submit" value="DELETE">
+        </form>
+
+ 
+
